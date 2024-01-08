@@ -1,4 +1,5 @@
 # woocomm-banner-page
 WP Plugin - WooCommerce Banner Page Setup
 
-WooCoomerce Plugin showing a banner on front end customizable by the plugin backend
+WooCoomerce Plugin showing a banner on front end customizable by the plugin backend.
+Typical use : Black Friday Offer / Discount
