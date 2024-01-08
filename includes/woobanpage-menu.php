@@ -1,43 +1,34 @@
 <?php
-/*
-WOO Banner Menu + Form.
-*/
-
-// MENU PLUGIN DEFINITION
-function woobanpage_settings_page()
-{
-    add_menu_page(
-        __( 'Plugin Page Settings', 'woobanpage' ), // admin_page_title
-        __( 'WooCommerce Banner', 'woobanpage' ),
-        'manage_options',
-        'woobanpage',
-        'woobanpage_settings_page_markup',
-        'dashicons-plugins-checked',
-        65
-    );
-
-}
-add_action( 'admin_menu', 'woobanpage_settings_page' );
 
 
-// FORM PAGE DEFINITION
-function woobanpage_settings_page_markup()
+/*  -----------------------------------------------------------------------------------------------
+PLUGIN MENU + FORM
+--------------------------------------------------------------------------------------------------- */
+
+
+// PLUGIN FORM 
+function woobanpage_menu_page_cb()
 {
     // Double check user capabilities
     if ( !current_user_can('manage_options') ) {
       return;
     }
-    include( WPPLUGIN_DIR . 'templates/admin/woobanpage-form-page.php');
-
-
+    include( WOOBANPAGE_DIR . 'templates/admin/woobanpage-form-page.php');
 }
 
 
-// // Add a link to your settings page in your plugin
-// function wpplugin_add_settings_link( $links ) {
-//     $settings_link = '<a href="admin.php?page=woobanpage">' . __( 'Settings' ) . '</a>';
-//     array_push( $links, $settings_link );
-//   	return $links;
-// }
-// $filter_name = "plugin_action_links_" . plugin_basename( __FILE__ );
-// add_filter( $filter_name, 'woobanpage_add_settings_link' );
+// PLUGIN MENU  
+function woobanpage_menu_page()
+{
+    add_menu_page(
+        __( 'WooCommerce Banner Page Setup', 'woobanpage' ), // admin_page_title
+        __( 'WooCommerce Banner', 'woobanpage' ), // menu title
+        'manage_options',
+        'woobanpage',
+        'woobanpage_menu_page_cb',
+        'dashicons-menu',
+        0
+    );
+
+}
+add_action( 'admin_menu', 'woobanpage_menu_page' );

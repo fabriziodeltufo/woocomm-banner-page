@@ -1,0 +1,8 @@
+/* wp-plugin-style.css  */
+body{
+  background-color: lightcyan;
+}
+
+#woobanpage_customtext{
+  width: 300px;
+}

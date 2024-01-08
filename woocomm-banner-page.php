@@ -1,15 +1,14 @@
 <?php
   /*
-  Plugin Name: WooCommerce Banner + Page settings.
-  Plugin URI: https://github.com/fabriziodeltufo
-  Description: Yellow / Red Banner + Plugin Page Settings.
-  Version: 1.0.0
-  Contributors:
-  Author: Fabrizio Del Tufo
-  Author URI: https://github.com/fabriziodeltufo
-  License: GPLv2 or later
+  Plugin Name:  WooCommerce Banner Page Setup.
+  Plugin URI:   https://github.com/fabriziodeltufo
+  Description:  Yellow / Red Banner Text Customizable by Plugin Page Setup.
+  Version:      1.0.0
+  Author:       Fabrizio Del Tufo
+  Author URI:   https://github.com/fabriziodeltufo
+  License:      GPLv2 or later
   License URI:  https://www.gnu.org/licenses/gpl-2.0.html
-  Text Domain: woobanpage
+  Text Domain:  woobanpage
   Domain Path:  /languages
   */
 
@@ -18,12 +17,12 @@
     die;
   }
 
-  define( 'WPPLUGIN_URL', plugin_dir_url( __FILE__ ) );
-  define( 'WPPLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+  define( 'WOOBANPAGE_URL', plugin_dir_url( __FILE__ ) );
+  define( 'WOOBANPAGE_DIR', plugin_dir_path( __FILE__ ) );
 
 
-  include( plugin_dir_path( __FILE__ ) . 'includes/woobanpage-style.php');
+  // include( plugin_dir_path( __FILE__ ) . 'includes/woobanpage-style.php');
+  include( WOOBANPAGE_DIR . 'includes/woobanpage-style.php');
+  include( WOOBANPAGE_DIR . 'includes/woobanpage-menu.php');
+  include( WOOBANPAGE_DIR . 'includes/woobanpage-settings-fields.php');
 
-  include( plugin_dir_path( __FILE__ ) . 'includes/woobanpage-settings-fields.php');
-
-  include( plugin_dir_path( __FILE__ ) . 'includes/woobanpage-menu.php');
