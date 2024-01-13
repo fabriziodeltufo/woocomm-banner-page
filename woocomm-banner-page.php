@@ -1,15 +1,17 @@
 <?php
   /*
-  Plugin Name:  WooCommerce Banner Page Setup.
-  Plugin URI:   https://github.com/fabriziodeltufo
-  Description:  Yellow / Red Banner Text Customizable by Plugin Page Setup.
-  Version:      1.0.0
-  Author:       Fabrizio Del Tufo
-  Author URI:   https://github.com/fabriziodeltufo
-  License:      GPLv2 or later
-  License URI:  https://www.gnu.org/licenses/gpl-2.0.html
-  Text Domain:  woobanpage
-  Domain Path:  /languages
+  * Plugin Name:  WooCommerce Banner Page Setup.
+  * Plugin URI:   https://wewebby.gumroad.com/
+  * Description:  Yellow / Red Banner Text Customizable by Plugin Page Setup.
+  * Version:      1.0.0
+  * Requires at least: 6.4.2
+  * Requires PHP:      7.4.33
+  * Author:       WeWebby.com
+  * Author URI:   https://wewebby.com
+  * License:      GPLv2 or later
+  * License URI:  https://www.gnu.org/licenses/gpl-2.0.html
+  * Text Domain:  woobanpage
+  * Domain Path:  /languages
   */
 
   // If this file is called directly, abort.
